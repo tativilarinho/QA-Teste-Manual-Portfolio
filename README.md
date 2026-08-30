@@ -1,2 +1,2 @@
 # QA-Teste-Manual-Portfolio
-Pratica de realizar testes manuais na aplicação BugBank
+Projeto de QA/Teste Manual realizado na aplicação BugBank, incluindo planejamento, casos de teste, testes exploratórios, registro de bugs e evidências.
