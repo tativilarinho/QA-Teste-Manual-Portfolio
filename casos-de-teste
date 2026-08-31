@@ -56,7 +56,7 @@ Validar se um novo usuário consegue realizar o cadastro utilizando dados válid
 ### Passos
 
 1. Acessar a aplicação BugBank.
-2. Acessar a opção de cadastro.
+2. Acessar a opção de registrar.
 3. Informar o nome.
 4. Informar um e-mail válido.
 5. Informar uma senha.
@@ -69,15 +69,19 @@ O sistema deve aceitar os dados informados e concluir o processo de cadastro, ap
 
 ### Resultado obtido
 
-A preencher após a execução.
+O cadastro foi realizado com sucesso. Mas, foi identificado que alguns textos e elementos da interface estavam apresentados de forma invertida/espelhada visualmente.
 
 ### Status
 
-⏳ A executar
+✅ PASS
+
+### Observação
+
+Embora o fluxo funcional de cadastro tenha sido concluído com sucesso, foi identificado um defeito visual durante a execução. O problema foi registrado separadamente como BUG-001.
 
 ### Evidência
 
-A adicionar após a execução.
+evidencias/CT-001.png
 
 ---
 
