@@ -1,1 +1,549 @@
+# 🧪 Casos de Teste — BugBank
+
+## 1. Objetivo
+
+Este documento apresenta os casos de teste elaborados para validar as principais funcionalidades da aplicação BugBank.
+
+Os testes contemplam cenários positivos, negativos e de validação, buscando verificar tanto o comportamento esperado da aplicação quanto possíveis comportamentos inesperados.
+
+---
+
+# 2. Resumo dos Casos de Teste
+
+| ID     | Requisito     | Funcionalidade | Cenário                                 | Prioridade | Status       |
+| ------ | ------------- | -------------- | --------------------------------------- | ---------- | ------------ |
+| CT-001 | RF-001        | Cadastro       | Cadastro com dados válidos              | Alta       | ⏳ A executar |
+| CT-002 | RF-012        | Cadastro       | Cadastro com campos obrigatórios vazios | Alta       | ⏳ A executar |
+| CT-003 | RF-005        | Cadastro       | Cadastro com senhas diferentes          | Alta       | ⏳ A executar |
+| CT-004 | RF-002/RF-013 | Cadastro       | Cadastro com e-mail inválido            | Alta       | ⏳ A executar |
+| CT-005 | RF-007        | Login          | Login com credenciais válidas           | Alta       | ⏳ A executar |
+| CT-006 | RF-007        | Login          | Login com senha incorreta               | Alta       | ⏳ A executar |
+| CT-007 | RF-012        | Login          | Login com campos vazios                 | Alta       | ⏳ A executar |
+| CT-008 | RF-006/RF-009 | Conta          | Criação de conta com saldo              | Média      | ⏳ A executar |
+| CT-009 | RF-010/RF-009 | Transferência  | Transferência com dados válidos         | Alta       | ⏳ A executar |
+| CT-010 | RF-013        | Transferência  | Validação de valores inválidos          | Alta       | ⏳ A executar |
+
+---
+
+# 3. Detalhamento dos Casos de Teste
+
+## CT-001 — Cadastro com dados válidos
+
+**Requisito:** RF-001
+**Funcionalidade:** Cadastro
+**Prioridade:** Alta
+**Tipo:** Teste positivo
+
+### Objetivo
+
+Validar se um novo usuário consegue realizar o cadastro utilizando dados válidos.
+
+### Pré-condições
+
+* Aplicação disponível;
+* Usuário ainda não cadastrado;
+* E-mail disponível para utilização no teste.
+
+### Dados de teste
+
+| Campo       | Valor                                     |
+| ----------- | ----------------------------------------- |
+| Nome        | QA Teste 01                               |
+| E-mail      | testebugbank@gmail.com                    |
+| Senha       | 123bug                                    |
+| Confirmação | 123bug                                    |
+
+### Passos
+
+1. Acessar a aplicação BugBank.
+2. Acessar a opção de cadastro.
+3. Informar o nome.
+4. Informar um e-mail válido.
+5. Informar uma senha.
+6. Confirmar a senha.
+7. Concluir o cadastro.
+
+### Resultado esperado
+
+O sistema deve aceitar os dados informados e concluir o processo de cadastro, apresentando ao usuário a resposta correspondente.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+## CT-002 — Cadastro com campos obrigatórios vazios
+
+**Requisito:** RF-012
+**Funcionalidade:** Cadastro
+**Prioridade:** Alta
+**Tipo:** Teste negativo
+
+### Objetivo
+
+Verificar o comportamento da aplicação quando o usuário tenta realizar o cadastro sem preencher os campos necessários.
+
+### Pré-condições
+
+* Aplicação disponível;
+* Tela de cadastro acessível.
+
+### Dados de teste
+
+Todos os campos permanecem vazios.
+
+### Passos
+
+1. Acessar a aplicação.
+2. Acessar a tela de cadastro.
+3. Não preencher os campos.
+4. Tentar concluir o cadastro.
+
+### Resultado esperado
+
+O sistema deve impedir o cadastro e apresentar mensagens de validação adequadas para os campos obrigatórios.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+## CT-003 — Cadastro com senhas diferentes
+
+**Requisito:** RF-005
+**Funcionalidade:** Cadastro
+**Prioridade:** Alta
+**Tipo:** Teste negativo
+
+### Objetivo
+
+Verificar se o sistema identifica quando a senha e sua confirmação são diferentes.
+
+### Pré-condições
+
+* Aplicação disponível;
+* Tela de cadastro acessível.
+
+### Dados de teste
+
+| Campo       | Valor                                     |
+| ----------- | ----------------------------------------- |
+| Nome        | QA Teste 01                               |
+| E-mail      | testebugbank@gmail.com                    |
+| Senha       | 123bug                                    |
+| Confirmação | bug123                                    |
+
+### Passos
+
+1. Acessar a tela de cadastro.
+2. Preencher o nome.
+3. Informar um e-mail válido.
+4. Informar a senha.
+5. Informar uma senha de confirmação diferente.
+6. Tentar concluir o cadastro.
+
+### Resultado esperado
+
+O sistema deve identificar a divergência entre as senhas e impedir a conclusão do cadastro.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+## CT-004 — Cadastro com e-mail inválido
+
+**Requisitos:** RF-002 / RF-013
+**Funcionalidade:** Cadastro
+**Prioridade:** Alta
+**Tipo:** Teste negativo
+
+### Objetivo
+
+Verificar se a aplicação valida corretamente o formato do endereço de e-mail.
+
+### Dados de teste
+
+Serão utilizados formatos inválidos, como:
+
+```text
+teste@
+teste.com
+testebugbank@@gmail.com
+```
+
+### Passos
+
+1. Acessar a tela de cadastro.
+2. Informar um nome válido.
+3. Informar um e-mail inválido.
+4. Preencher os demais campos corretamente.
+5. Tentar concluir o cadastro.
+6. Repetir o teste utilizando os diferentes formatos de e-mail.
+
+### Resultado esperado
+
+O sistema deve validar o formato do e-mail e impedir o cadastro quando o endereço informado for considerado inválido.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# CT-005 — Login com credenciais válidas
+
+**Requisito:** RF-007
+**Funcionalidade:** Login
+**Prioridade:** Alta
+**Tipo:** Teste positivo
+
+### Objetivo
+
+Verificar se um usuário cadastrado consegue acessar sua conta utilizando credenciais válidas.
+
+### Pré-condições
+
+* Usuário previamente cadastrado;
+* E-mail e senha conhecidos.
+
+### Dados de teste
+
+```text
+E-mail: testebugbank@gmail.com
+Senha: 123bug
+```
+
+### Passos
+
+1. Acessar a página inicial.
+2. Informar o e-mail cadastrado.
+3. Informar a senha correta.
+4. Clicar para acessar.
+
+### Resultado esperado
+
+O sistema deve autenticar o usuário e permitir o acesso à área da conta.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# CT-006 — Login com senha incorreta
+
+**Requisito:** RF-007
+**Funcionalidade:** Login
+**Prioridade:** Alta
+**Tipo:** Teste negativo
+
+### Objetivo
+
+Verificar se o sistema impede o acesso quando a senha informada está incorreta.
+
+### Pré-condições
+
+* Usuário previamente cadastrado.
+
+### Dados de teste
+
+```text
+E-mail: qabugbank@gmail.com
+Senha: 123bank
+```
+
+### Passos
+
+1. Acessar a página de login.
+2. Informar um e-mail cadastrado.
+3. Informar uma senha incorreta.
+4. Tentar realizar o login.
+
+### Resultado esperado
+
+O sistema não deve autenticar o usuário e deve apresentar uma mensagem adequada informando que as credenciais não são válidas.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# CT-007 — Login com campos vazios
+
+**Requisito:** RF-012
+**Funcionalidade:** Login
+**Prioridade:** Alta
+**Tipo:** Teste negativo
+
+### Objetivo
+
+Verificar se a aplicação realiza validação quando o usuário tenta acessar o sistema sem informar as credenciais.
+
+### Dados de teste
+
+```text
+E-mail: vazio
+Senha: vazio
+```
+
+### Passos
+
+1. Acessar a tela de login.
+2. Não preencher o e-mail.
+3. Não preencher a senha.
+4. Tentar realizar o login.
+
+### Resultado esperado
+
+O sistema deve impedir a tentativa de autenticação e apresentar as mensagens de validação correspondentes.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# CT-008 — Criação de conta com saldo
+
+**Requisitos:** RF-006 / RF-009
+**Funcionalidade:** Conta
+**Prioridade:** Média
+**Tipo:** Teste funcional
+
+### Objetivo
+
+Verificar o comportamento da aplicação ao criar uma conta utilizando a opção de criação com saldo.
+
+### Pré-condições
+
+* Aplicação disponível;
+* E-mail ainda não utilizado.
+
+### Dados de teste
+
+| Campo                 | Valor                                     |
+| --------------------- | ----------------------------------------- |
+| Nome                  | QA Teste 08                               |
+| E-mail                | testebugbank@gmail.com                    |
+| Senha                 | 123bug                                    |
+| Confirmação           | 123bug                                    |
+| Criar conta com saldo | Selecionado                               |
+
+### Passos
+
+1. Acessar a tela de cadastro.
+2. Informar os dados válidos.
+3. Selecionar a opção de criação de conta com saldo.
+4. Concluir o cadastro.
+5. Realizar login com o usuário criado.
+6. Verificar o saldo apresentado.
+
+### Resultado esperado
+
+A conta deve ser criada e, após o login, o sistema deve apresentar o saldo correspondente ao comportamento definido pela aplicação.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# CT-009 — Transferência com dados válidos
+
+**Requisitos:** RF-010 / RF-009
+**Funcionalidade:** Transferência
+**Prioridade:** Alta
+**Tipo:** Teste positivo
+
+### Objetivo
+
+Verificar se uma transferência pode ser realizada utilizando dados válidos.
+
+### Pré-condições
+
+* Usuário remetente cadastrado;
+* Usuário destinatário cadastrado;
+* Usuário remetente autenticado;
+* Saldo suficiente para realizar a operação.
+
+### Dados de teste
+
+```text
+Remetente: QA Teste 01
+Destinatário: QA Teste 02
+Valor: R$ 100,00
+```
+
+### Passos
+
+1. Realizar login com o usuário remetente.
+2. Acessar a funcionalidade de transferência.
+3. Informar os dados do destinatário.
+4. Informar o valor de R$ 100,00.
+5. Confirmar a operação.
+6. Verificar o saldo do remetente.
+7. Acessar a conta do destinatário.
+8. Verificar o saldo do destinatário.
+
+### Resultado esperado
+
+A transferência deve ser processada conforme as regras da aplicação e os saldos envolvidos devem ser atualizados corretamente.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# CT-010 — Validação de valores de transferência
+
+**Requisito:** RF-013
+**Funcionalidade:** Transferência
+**Prioridade:** Alta
+**Tipo:** Teste negativo / Validação
+
+### Objetivo
+
+Avaliar o comportamento da aplicação diante de diferentes valores informados para uma transferência.
+
+### Cenários
+
+| Cenário                 |         Valor |
+| ----------------------- | ------------: |
+| Campo vazio             |             — |
+| Valor zero              |       R$ 0,00 |
+| Valor negativo          |    -R$ 100,00 |
+| Valor superior ao saldo | R$ 999.999,00 |
+| Valor decimal           |      R$ 10,50 |
+| Texto                   |           ABC |
+
+### Pré-condições
+
+* Usuário autenticado;
+* Conta destinatária disponível;
+* Saldo conhecido.
+
+### Passos
+
+1. Acessar a funcionalidade de transferência.
+2. Informar uma conta destinatária válida.
+3. Informar um dos valores definidos nos cenários.
+4. Tentar concluir a operação.
+5. Registrar o comportamento apresentado.
+6. Repetir o teste para cada cenário.
+
+### Resultado esperado
+
+A aplicação deve validar os valores informados e impedir operações que não sejam aceitas pelas regras de negócio.
+
+### Resultado obtido
+
+A preencher após a execução.
+
+### Status
+
+⏳ A executar
+
+### Evidência
+
+A adicionar após a execução.
+
+---
+
+# 4. Legenda de Status
+
+| Status       | Significado                          |
+| ------------ | ------------------------------------ |
+| ⏳ A executar | Caso ainda não executado             |
+| ✅ PASS       | Resultado esperado confirmado        |
+| ❌ FAIL       | Resultado diferente do esperado      |
+| 🚫 BLOCKED   | Execução impedida por algum bloqueio |
+| ➖ N/A        | Caso não aplicável                   |
+
+---
+
+# 5. Observações
+
+Os campos **Resultado obtido**, **Status** e **Evidência** serão preenchidos somente após a execução dos testes.
+
+Quando um caso apresentar resultado diferente do esperado, será realizada uma análise para determinar se o comportamento representa um defeito.
+
+Defeitos confirmados serão registrados individualmente na pasta `bug-reports`.
 
