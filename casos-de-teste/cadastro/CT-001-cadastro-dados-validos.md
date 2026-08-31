@@ -52,4 +52,4 @@ Embora o fluxo funcional de cadastro tenha sido concluído com sucesso, foi iden
 
 ### Evidência
 
-(.../evidencias/CT-001.png)
+![Evidência do teste](../evidencias/CT-001.png)
