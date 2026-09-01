@@ -41,12 +41,12 @@ A transferência deve ser processada conforme as regras da aplicação e os sald
 
 ### Resultado obtido
 
-A preencher após a execução.
+Não foi possível executar o teste, pois a aplicação não disponibilizou uma segunda conta/número de conta necessário para realizar uma transferência entre usuários.
 
 ### Status
 
-⏳ A executar
+🚫 BLOCKED
 
 ### Evidência
 
-A adicionar após a execução.
+O caso de teste permanece válido para uma versão da aplicação ou ambiente que disponibilize contas de origem e destino para realização de transferências.
