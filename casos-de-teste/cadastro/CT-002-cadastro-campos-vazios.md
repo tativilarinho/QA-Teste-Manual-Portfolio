@@ -31,13 +31,13 @@ O sistema deve impedir o cadastro e apresentar mensagens de validação adequada
 
 ### Resultado obtido
 
-A preencher após a execução.
+Ao tentar realizar o cadastro com os campos obrigatórios vazios, o sistema impediu a conclusão do cadastro e apresentou as validações esperadas para os campos obrigatórios.
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
 
