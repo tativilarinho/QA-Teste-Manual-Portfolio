@@ -29,13 +29,13 @@ O sistema deve impedir a tentativa de autenticação e apresentar as mensagens d
 
 ### Resultado obtido
 
-A preencher após a execução.
+O sistema impediu a tentativa de autenticação e apresentou a mensagem "É campo obrigatório" abaixo dos campos de e-mail e senha.
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
 
