@@ -14,16 +14,16 @@ Os detalhes de cada caso de teste estão organizados em arquivos individuais den
 
 | ID | Requisito | Funcionalidade | Cenário | Prioridade | Status |
 |---|---|---|---|---|---|
-| [CT-001](casos-de-teste/cadastro/CT-001-cadastro-dados-validos.md) | RF-001 | Cadastro | Cadastro com dados válidos | Alta | ✅ PASS |
-| [CT-002](casos-de-teste/cadastro/CT-002-cadastro-campos-vazios.md) | RF-012 | Cadastro | Cadastro com campos obrigatórios vazios | Alta | ⏳ A executar |
-| [CT-003](casos-de-teste/cadastro/CT-003-senhas-diferentes.md) | RF-005 | Cadastro | Cadastro com senhas diferentes | Alta | ⏳ A executar |
-| [CT-004](casos-de-teste/cadastro/CT-004-email-invalido.md) | RF-002/RF-013 | Cadastro | Cadastro com e-mail inválido | Alta | ⏳ A executar |
-| [CT-005](casos-de-teste/login/CT-005-login-valido.md) | RF-007 | Login | Login com credenciais válidas | Alta | ⏳ A executar |
-| [CT-006](casos-de-teste/login/CT-006-login-senha-incorreta.md) | RF-007 | Login | Login com senha incorreta | Alta | ⏳ A executar |
-| [CT-007](casos-de-teste/login/CT-007-login-campos-vazios.md) | RF-012 | Login | Login com campos vazios | Alta | ⏳ A executar |
+| [CT-001](casos-de-teste/cadastro/CT-001-cadastro-dados-validos.md) | RF-001 | Cadastro | Cadastro com dados válidos | Alta | ✅ PASS + 🐞 BUG-001 |
+| [CT-002](casos-de-teste/cadastro/CT-002-cadastro-campos-vazios.md) | RF-012 | Cadastro | Cadastro com campos obrigatórios vazios | Alta | ✅ PASS |
+| [CT-003](casos-de-teste/cadastro/CT-003-senhas-diferentes.md) | RF-005 | Cadastro | Cadastro com senhas diferentes | Alta | ✅ PASS |
+| [CT-004](casos-de-teste/cadastro/CT-004-email-invalido.md) | RF-002/RF-013 | Cadastro | Cadastro com e-mail inválido | Alta | ✅ PASS |
+| [CT-005](casos-de-teste/login/CT-005-login-valido.md) | RF-007 | Login | Login com credenciais válidas | Alta | ✅ PASS |
+| [CT-006](casos-de-teste/login/CT-006-login-senha-incorreta.md) | RF-007 | Login | Login com senha incorreta | Alta | ✅ PASS |
+| [CT-007](casos-de-teste/login/CT-007-login-campos-vazios.md) | RF-012 | Login | Login com campos vazios | Alta | ✅ PASS |
 | [CT-008](casos-de-teste/conta/CT-008-conta-com-saldo.md) | RF-006/RF-009 | Conta | Criação de conta com saldo | Média | ⏳ A executar |
-| [CT-009](casos-de-teste/transferencia/CT-009-transferencia-valida.md) | RF-010/RF-009 | Transferência | Transferência com dados válidos | Alta | ⏳ A executar |
-| [CT-010](casos-de-teste/transferencia/CT-010-valores-transferencia.md) | RF-013 | Transferência | Validação de valores inválidos | Alta | ⏳ A executar |
+| [CT-009](casos-de-teste/transferencia/CT-009-transferencia-valida.md) | RF-010/RF-009 | Transferência | Transferência com dados válidos | Alta | 🚫 BLOCKED |
+| [CT-010](casos-de-teste/transferencia/CT-010-valores-transferencia.md) | RF-013 | Transferência | Validação de valores inválidos | Alta | 🚫 BLOCKED |
 
 ---
 
@@ -76,3 +76,13 @@ Neste projeto, um caso de teste pode apresentar resultado **PASS** e ainda assim
 Os resultados dos testes serão atualizados conforme a execução for realizada.
 
 Os resultados apresentados neste documento devem representar o comportamento efetivamente observado na aplicação durante os testes.
+
+---
+
+## 7. Limitações do Ambiente de Teste
+
+Durante a execução dos casos de teste, foram identificadas limitações funcionais da aplicação que impediram a execução de alguns cenários relacionados à transferência.
+
+Os casos CT-009 e CT-010 foram classificados como **BLOCKED**, pois não foi possível estabelecer as condições necessárias para realizar uma transferência entre contas e validar os diferentes valores previstos.
+
+Os casos permanecem documentados para demonstrar a cobertura planejada e poderão ser executados em um ambiente que disponibilize as condições necessárias.
