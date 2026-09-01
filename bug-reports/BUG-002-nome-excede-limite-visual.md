@@ -74,3 +74,7 @@ Não identificado nos casos de teste estruturados.
 ## Observação
 
 O defeito foi identificado durante uma sessão de teste exploratório, utilizando uma entrada com quantidade elevada de caracteres no campo de nome.
+
+## Evidência
+
+![BUG-002 — Nome excedendo os limites visuais](../evidencias/BUG-002-nome-excedendo-limite.png)
