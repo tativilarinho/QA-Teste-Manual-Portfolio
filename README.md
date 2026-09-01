@@ -108,14 +108,14 @@ Também serão realizados testes exploratórios com o objetivo de identificar co
 
 > Os resultados serão atualizados conforme os testes forem executados.
 
-| Métrica          | Resultado |
-| ---------------- | --------: |
-| Casos planejados |        10 |
-| Casos executados |         0 |
-| Aprovados        |         0 |
-| Reprovados       |         0 |
-| Bloqueados       |         0 |
-| Bugs encontrados |         0 |
+| Métrica | Resultado |
+|---|---:|
+| Casos planejados | 10 |
+| Casos executados | 8 |
+| PASS | 8 |
+| FAIL | 0 |
+| BLOCKED | 2 |
+| Bugs identificados | 1 |
 
 ## 🐞 Defeitos encontrados
 
