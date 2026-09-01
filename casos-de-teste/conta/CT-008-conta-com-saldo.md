@@ -39,12 +39,12 @@ A conta deve ser criada e, após o login, o sistema deve apresentar o saldo corr
 
 ### Resultado obtido
 
-A preencher após a execução.
+Após a criação da conta com a opção de criação com saldo e realização do login, o sistema apresentou saldo de **R$ 1.000,00**, conforme o comportamento esperado.
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
