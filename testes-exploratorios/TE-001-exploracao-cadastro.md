@@ -11,8 +11,20 @@
 | 7 | Navegação entre cadastro e login após preenchimento parcial | Dados permaneceram preenchidos |
 | 8 | Atualização da página durante o preenchimento | Sistema retornou à página inicial e os dados foram perdidos |
 
-## Observações
+## Defeitos identificados
 
-Durante a exploração foram identificados alguns comportamentos que merecem análise adicional, principalmente relacionados à validação dos campos de cadastro e ao comportamento visual do campo de nome quando preenchido com uma quantidade elevada de caracteres.
+### BUG-002 — Campo de nome permite texto excessivamente longo
 
-Os comportamentos observados não foram classificados automaticamente como defeitos, sendo necessária a análise dos requisitos e/ou confirmação do comportamento esperado da aplicação.
+Durante a exploração do campo de nome, foi identificado que a aplicação permite a inserção de aproximadamente 100–200 caracteres.
+
+O conteúdo ultrapassou visualmente os limites disponíveis da interface, sem apresentação de uma barra de rolagem horizontal.
+
+O comportamento também foi observado após a conclusão do cadastro.
+
+O defeito foi documentado separadamente em [BUG-002](../bug-reports/BUG-002-nome-excede-limite-visual.md).
+
+## Conclusão
+
+A sessão exploratória permitiu identificar um defeito relacionado ao tratamento de entradas excessivamente longas no campo de nome.
+
+Além do defeito identificado, foram avaliados diferentes comportamentos relacionados à validação, navegação e preenchimento do formulário de cadastro.
