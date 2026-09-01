@@ -34,12 +34,12 @@ O sistema deve autenticar o usuário e permitir o acesso à área da conta.
 
 ### Resultado obtido
 
-A preencher após a execução.
+O sistema autenticou o usuário com sucesso e permitiu o acesso à área da conta, conforme esperado.
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
