@@ -41,12 +41,12 @@ A aplicação deve validar os valores informados e impedir operações que não 
 
 ### Resultado obtido
 
-A preencher após a execução.
+Não foi possível executar o teste, pois não foi disponibilizada uma condição adequada para realização de uma transferência na aplicação, impossibilitando a validação dos diferentes valores previstos no cenário.
 
 ### Status
 
-⏳ A executar
+🚫 BLOCKED
 
 ### Evidência
 
-A adicionar após a execução.
+Os cenários de validação de valores permanecem definidos para execução em um ambiente que permita realizar transferências.
