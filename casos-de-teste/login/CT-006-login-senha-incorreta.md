@@ -16,7 +16,7 @@ Verificar se o sistema impede o acesso quando a senha informada está incorreta.
 ### Dados de teste
 
 ```text
-E-mail: qabugbank@gmail.com
+E-mail: testebugbank@gmail.com
 Senha: 123bank
 ```
 
@@ -33,12 +33,12 @@ O sistema não deve autenticar o usuário e deve apresentar uma mensagem adequad
 
 ### Resultado obtido
 
-A preencher após a execução.
+O sistema não autenticou o usuário e apresentou o alerta: "Usuário ou senha inválido. Tente novamente ou verifique suas informações!"
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
