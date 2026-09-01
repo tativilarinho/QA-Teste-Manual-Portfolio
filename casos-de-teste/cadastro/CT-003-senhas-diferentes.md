@@ -38,12 +38,12 @@ O sistema deve identificar a divergência entre as senhas e impedir a conclusão
 
 ### Resultado obtido
 
-A preencher após a execução.
+Ao tentar realizar o cadastro com senhas diferentes, o sistema identificou a divergência entre os campos de senha e confirmação de senha, impediu a conclusão do cadastro e apresentou o alerta: "As senhas não são iguais."
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
