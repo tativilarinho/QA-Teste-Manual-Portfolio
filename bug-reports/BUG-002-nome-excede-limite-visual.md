@@ -77,4 +77,4 @@ O defeito foi identificado durante uma sessão de teste exploratório, utilizand
 
 ## Evidência
 
-![BUG-002 — Nome excedendo os limites visuais](../evidencias/BUG-002-nome-excedendo-limite.png)
+![BUG-002 — Nome excedendo os limites visuais](../evidencias/BUG-002-nome-excedendo-limite.png.png)
