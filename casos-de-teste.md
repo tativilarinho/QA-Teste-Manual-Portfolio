@@ -21,13 +21,10 @@ Os detalhes de cada caso de teste estão organizados em arquivos individuais den
 | [CT-005](casos-de-teste/login/CT-005-login-valido.md) | RF-007 | Login | Login com credenciais válidas | Alta | ✅ PASS |
 | [CT-006](casos-de-teste/login/CT-006-login-senha-incorreta.md) | RF-007 | Login | Login com senha incorreta | Alta | ✅ PASS |
 | [CT-007](casos-de-teste/login/CT-007-login-campos-vazios.md) | RF-012 | Login | Login com campos vazios | Alta | ✅ PASS |
-| [CT-008](casos-de-teste/conta/CT-008-conta-com-saldo.md) | RF-006/RF-009 | Conta | Criação de conta com saldo | Média | ⏳ A executar |
+| [CT-008](casos-de-teste/conta/CT-008-conta-com-saldo.md) | RF-006/RF-009 | Conta | Criação de conta com saldo | Média | ✅ PASS |
 | [CT-009](casos-de-teste/transferencia/CT-009-transferencia-valida.md) | RF-010/RF-009 | Transferência | Transferência com dados válidos | Alta | 🚫 BLOCKED |
 | [CT-010](casos-de-teste/transferencia/CT-010-valores-transferencia.md) | RF-013 | Transferência | Validação de valores inválidos | Alta | 🚫 BLOCKED |
 
----
-
-## 3. Legenda de Status
 
 | Status | Significado |
 |---|---|
@@ -36,6 +33,28 @@ Os detalhes de cada caso de teste estão organizados em arquivos individuais den
 | ❌ FAIL | Resultado diferente do esperado |
 | 🚫 BLOCKED | Execução impedida por algum bloqueio |
 | ➖ N/A | Caso não aplicável |
+
+---
+
+## 3. Resumo da Execução
+
+Até o momento, foram executados 8 dos 10 casos de teste planejados.
+
+| Métrica | Resultado |
+|---|---:|
+| Casos planejados | 10 |
+| Casos executados | 8 |
+| PASS | 8 |
+| FAIL | 0 |
+| BLOCKED | 2 |
+| Bugs identificados | 1 |
+
+### Observações
+
+- Os casos CT-001 a CT-008 foram executados com sucesso.
+- O CT-001 apresentou um problema visual durante a execução, que foi registrado separadamente como [BUG-001](bug-reports/BUG-001.md).
+- Os casos CT-009 e CT-010 permaneceram bloqueados devido à limitação identificada durante a execução.
+- Nenhum dos casos executados apresentou resultado funcional inesperado.
 
 ---
 
