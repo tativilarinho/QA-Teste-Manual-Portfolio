@@ -34,12 +34,12 @@ O sistema deve validar o formato do e-mail e impedir o cadastro quando o endere�
 
 ### Resultado obtido
 
-A preencher após a execução.
+Ao tentar realizar o cadastro utilizando formatos inválidos de e-mail, o sistema identificou a inconsistência, impediu a conclusão do cadastro e apresentou a mensagem "Formato inválido" abaixo do campo de e-mail.
 
 ### Status
 
-⏳ A executar
+✅ PASS
 
 ### Evidência
 
-A adicionar após a execução.
+Não aplicável. Nenhuma evidência foi necessária para o resultado deste teste.
