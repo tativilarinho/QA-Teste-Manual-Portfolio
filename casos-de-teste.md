@@ -4,7 +4,7 @@
 
 Este documento apresenta a visão geral dos casos de teste elaborados para validar as principais funcionalidades da aplicação BugBank.
 
-Os testes contemplam cenários positivos, negativos e de validação, buscando verificar tanto o comportamento esperado da aplicação quanto possíveis comportamentos inesperados.
+Os testes contemplam cenários positivos, negativos e de validação, buscando verificar o comportamento esperado da aplicação e identificar possíveis comportamentos inesperados.
 
 Os detalhes de cada caso de teste estão organizados em arquivos individuais dentro da pasta [`casos-de-teste`](casos-de-teste/).
 
@@ -25,6 +25,7 @@ Os detalhes de cada caso de teste estão organizados em arquivos individuais den
 | [CT-009](casos-de-teste/transferencia/CT-009-transferencia-valida.md) | RF-010/RF-009 | Transferência | Transferência com dados válidos | Alta | 🚫 BLOCKED |
 | [CT-010](casos-de-teste/transferencia/CT-010-valores-transferencia.md) | RF-013 | Transferência | Validação de valores inválidos | Alta | 🚫 BLOCKED |
 
+### Legenda de Status
 
 | Status | Significado |
 |---|---|
@@ -38,7 +39,7 @@ Os detalhes de cada caso de teste estão organizados em arquivos individuais den
 
 ## 3. Resumo da Execução
 
-Até o momento, foram executados 8 dos 10 casos de teste planejados.
+Foram executados 8 dos 10 casos de teste planejados.
 
 | Métrica | Resultado |
 |---|---:|
@@ -52,17 +53,18 @@ Até o momento, foram executados 8 dos 10 casos de teste planejados.
 ### Observações
 
 - Os casos CT-001 a CT-008 foram executados com sucesso.
-- O CT-001 apresentou um problema visual durante a execução, que foi registrado separadamente como [BUG-001](bug-reports/BUG-001.md).
-- Os casos CT-009 e CT-010 permaneceram bloqueados devido à limitação identificada durante a execução.
-- Nenhum dos casos executados apresentou resultado funcional inesperado.
+- O CT-001 apresentou um problema visual adicional durante sua execução, registrado separadamente como [BUG-001](bug-reports/BUG-001.md).
+- O resultado funcional do CT-001 permaneceu como **PASS**, pois o comportamento principal do cadastro ocorreu conforme esperado.
+- Os casos CT-009 e CT-010 permaneceram como **BLOCKED** devido às limitações encontradas no ambiente de teste para validação completa dos cenários de transferência.
+- Nenhum dos casos executados apresentou falha funcional confirmada.
 
 ---
 
 ## 4. Critérios de Execução
 
-Os casos de teste serão executados manualmente na aplicação BugBank.
+Os casos de teste foram executados manualmente na aplicação BugBank.
 
-Durante a execução serão registrados:
+Durante a execução foram registrados:
 
 - Resultado obtido;
 - Status do teste;
@@ -70,15 +72,15 @@ Durante a execução serão registrados:
 - Observações;
 - Possíveis defeitos identificados.
 
-Quando um comportamento diferente do esperado for identificado, será realizada uma análise para determinar se o comportamento representa um defeito.
+Quando um comportamento diferente do esperado foi identificado, foi realizada uma análise para determinar se o comportamento representava um defeito.
 
-Defeitos confirmados serão documentados individualmente na pasta [`bug-reports`](bug-reports/).
+Defeitos confirmados foram documentados individualmente na pasta [`bug-reports`](bug-reports/).
 
 ---
 
 ## 5. Rastreabilidade
 
-A execução seguirá o fluxo:
+A execução seguiu o fluxo:
 
 **Requisito → Caso de Teste → Execução → Resultado → Bug Report**
 
@@ -88,20 +90,77 @@ Exemplo:
 
 Neste projeto, um caso de teste pode apresentar resultado **PASS** e ainda assim gerar um Bug Report referente a um problema adicional identificado durante sua execução.
 
----
-
-## 6. Observações
-
-Os resultados dos testes serão atualizados conforme a execução for realizada.
-
-Os resultados apresentados neste documento devem representar o comportamento efetivamente observado na aplicação durante os testes.
+Isso ocorre porque o resultado do caso de teste está relacionado ao objetivo principal do cenário, enquanto um defeito adicional identificado durante a execução pode ser registrado separadamente.
 
 ---
 
-## 7. Limitações do Ambiente de Teste
+## 6. Testes Exploratórios
 
-Durante a execução dos casos de teste, foram identificadas limitações funcionais da aplicação que impediram a execução de alguns cenários relacionados à transferência.
+Além dos casos de teste estruturados, foram realizadas sessões de testes exploratórios nas funcionalidades de:
 
-Os casos CT-009 e CT-010 foram classificados como **BLOCKED**, pois não foi possível estabelecer as condições necessárias para realizar uma transferência entre contas e validar os diferentes valores previstos.
+- Cadastro;
+- Login;
+- Conta e saldo.
 
-Os casos permanecem documentados para demonstrar a cobertura planejada e poderão ser executados em um ambiente que disponibilize as condições necessárias.
+Os testes exploratórios tiveram como objetivo ampliar a cobertura dos testes e investigar comportamentos que não estavam necessariamente contemplados nos casos de teste previamente definidos.
+
+Documentação disponível em:
+
+- [TE-001 — Exploração do Cadastro](testes-exploratorios/TE-001-exploracao-cadastro.md)
+- [TE-002 — Exploração do Login](testes-exploratorios/TE-002-exploracao-login.md)
+- [TE-003 — Exploração da Conta e Saldo](testes-exploratorios/TE-003-exploracao-conta-saldo.md)
+
+Durante os testes exploratórios, foi confirmado um defeito relacionado ao tratamento de nomes excessivamente longos, documentado como [BUG-002](bug-reports/BUG-002.md).
+
+---
+
+## 7. Defeitos Identificados
+
+| ID | Origem | Descrição | Severidade | Status |
+|---|---|---|---|---|
+| [BUG-001](bug-reports/BUG-001.md) | CT-001 | Elementos da interface apresentados de forma visualmente invertida | Baixa | Aberto |
+| [BUG-002](bug-reports/BUG-002.md) | TE-001 | Campo de nome permite texto excessivamente longo e ultrapassa os limites visuais | Baixa | Aberto |
+
+### Resumo dos defeitos
+
+Foram identificados **2 defeitos** durante o projeto:
+
+- **BUG-001:** identificado durante a execução do CT-001;
+- **BUG-002:** identificado e confirmado durante o teste exploratório TE-001.
+
+Os defeitos foram documentados separadamente para facilitar sua análise e rastreabilidade.
+
+---
+
+## 8. Limitações do Ambiente de Teste
+
+Durante a execução dos casos relacionados à transferência, foram identificadas limitações no ambiente disponível para validação completa dos cenários.
+
+A aplicação utiliza armazenamento local no navegador, o que dificultou a manutenção e validação simultânea de diferentes contas durante os testes.
+
+Por esse motivo, não foi possível confirmar de forma confiável todos os comportamentos necessários para concluir os cenários CT-009 e CT-010.
+
+Os casos foram classificados como **BLOCKED**, evitando classificar como defeito um comportamento que não pôde ser validado adequadamente.
+
+Os cenários permanecem documentados e podem ser executados posteriormente em um ambiente que permita a validação completa das condições necessárias.
+
+---
+
+## 9. Conclusão
+
+O projeto contemplou a elaboração e execução de casos de teste manuais para as principais funcionalidades do BugBank, incluindo:
+
+- Cadastro;
+- Login;
+- Conta;
+- Saldo;
+- Validações;
+- Transferência.
+
+Foram executados **8 dos 10 casos de teste planejados**, com **8 resultados PASS**, nenhum FAIL e **2 casos BLOCKED** devido às limitações encontradas no ambiente de teste.
+
+Também foram realizadas sessões de testes exploratórios, ampliando a cobertura das funcionalidades avaliadas e permitindo a identificação de comportamentos não contemplados inicialmente.
+
+Ao final da execução, foram documentados **2 defeitos**, cada um com seu respectivo Bug Report e evidências.
+
+O projeto demonstra a aplicação prática de conceitos de **QA Manual**, incluindo elaboração de requisitos, planejamento de testes, execução, registro de evidências, identificação e documentação de defeitos, testes exploratórios e rastreabilidade.
