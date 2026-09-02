@@ -131,11 +131,12 @@ Os testes exploratórios tiveram como objetivo ampliar a cobertura além dos cas
 | Documento | Descrição |
 |---|---|
 | [Matriz de Requisitos](requisitos.md) | Requisitos e funcionalidades avaliadas |
-| [Casos de Teste](casos-de-teste.md) | Casos de teste manuais e resultados da execução |
-| [Checklist](checklist.md) | Checklist de validação |
-| [Bug Reports](bug-reports/) | Defeitos encontrados durante os testes |
-| [Evidências](evidencias/) | Screenshots utilizados como evidência |
-| [Testes Exploratórios](testes-exploratorios/) | Sessões de exploração realizadas |
+| [Cenários de Teste](cenarios-de-teste.md) | Cenários definidos a partir dos requisitos |
+| [Casos de Teste](casos-de-teste.md) | Casos de teste manuais e resultados das execuções |
+| [Testes Exploratórios](testes-exploratorios/) | Sessões e resultados dos testes exploratórios |
+| [Bug Reports](bug-reports/) | Defeitos encontrados e documentados |
+| [Evidências](evidencias/) | Screenshots utilizados como evidência das execuções |
+
 
 ---
 
@@ -243,16 +244,17 @@ Durante o desenvolvimento deste projeto foram praticados conceitos relacionados 
 - Quality Assurance;
 - Testes manuais;
 - Análise de requisitos;
-- Técnicas de teste;
+- Cenários de teste;
 - Casos de teste;
 - Testes positivos e negativos;
 - Testes exploratórios;
-- Regras de negócio;
+- Validação de regras de negócio;
 - Bug Reporting;
 - Severidade e prioridade;
 - Evidências de teste;
 - Rastreabilidade;
-- Git e GitHub.
+- Git e GitHub;
+- Documentação técnica.
 
 ---
 
